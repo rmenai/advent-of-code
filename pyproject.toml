@@ -7,12 +7,12 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+advent-of-code-data = "^1.1.1"
 pydantic = "^1.8.2"
 taskipy = "^1.8.2"
 
 [tool.poetry.dev-dependencies]
 colorlog = "^6.5.0"
-coverage = "^6.1.1"
 flake8 = "^3.9.2"
 flake8-annotations = "^2.6.2"
 flake8-bugbear = "^21.9.1"
@@ -23,7 +23,6 @@ flake8-tidy-imports = "^4.4.1"
 flake8-todo = "^0.7"
 pep8-naming = "^0.12.1"
 pre-commit = "^2.15.0"
-pytest = "^6.2.5"
 python-dotenv = "^0.19.0"
 
 [build-system]
@@ -31,8 +30,6 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.taskipy.tasks]
-start = "python -m app"
-test = "coverage run -m pytest tests/"
-report = "coverage report"
+start = "python -m aoc"
 lint = "pre-commit run --all-files"
 precommit = "pre-commit install"

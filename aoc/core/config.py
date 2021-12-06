@@ -2,9 +2,10 @@ from pydantic import BaseSettings
 
 
 class Global(BaseSettings):
-    """The app settings."""
+    """The aoc settings."""
 
     debug: bool = False
+    aoc_session: str
 
     class Config:
         """The Pydantic settings configuration."""

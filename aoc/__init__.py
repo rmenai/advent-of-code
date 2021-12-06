@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-from app.core import settings
+from aoc.core import settings
 
 # Set up file logging.
 log_dir = Path(f"{__name__}/logs")
@@ -49,3 +49,6 @@ logging.basicConfig(
     level=logging.DEBUG,
     handlers=[console_handler, file_handler]
 )
+
+# Set PYTHONPATH to the current working directory for subprocess.
+os.environ["PYTHONPATH"] = os.getcwd()
